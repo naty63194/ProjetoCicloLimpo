@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Compromisso</title>
+    <link rel="stylesheet" href="enderecoMorador.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Termos de Compromisso</h1>
+        <div class="terms-content">
+            <p>
+                Bem-vindo ao nosso sistema. Este documento estabelece os termos e condições que você deve seguir
+                para utilizar a plataforma de maneira ética e responsável. Leia atentamente os pontos abaixo antes de
+                prosseguir:
+            </p>
+            <h2>Compromissos do Usuário</h2>
+            <p>Ao utilizar este sistema, você concorda em:</p>
+            <ul>
+                <li>Utilizar o sistema de forma ética e em conformidade com as leis e regulamentos aplicáveis;</li>
+                <li>Respeitar a privacidade e a segurança dos outros usuários e das informações acessadas;</li>
+                <li>Manter a integridade e a confidencialidade dos dados e informações que forem acessadas através do sistema;</li>
+                <li>Não compartilhar ou divulgar informações de terceiros sem autorização prévia;</li>
+                <li>Reportar qualquer problema de segurança ou violação de privacidade observada durante o uso da plataforma.</li>
+            </ul>
+            <h2>Política de Privacidade e Segurança</h2>
+            <p>
+                Nós valorizamos a segurança e a privacidade de nossos usuários. Portanto, todas as informações pessoais
+                e confidenciais fornecidas serão tratadas de acordo com nossas políticas de segurança, visando proteger
+                os dados contra acesso não autorizado e uso indevido.
+            </p>
+            <h2>Consequências do Descumprimento</h2>
+            <p>
+                O não cumprimento dos compromissos aqui descritos poderá resultar na suspensão ou no cancelamento
+                do acesso ao sistema, além de possíveis ações legais caso sejam observadas violações graves.
+            </p>
+            <p>
+                Ao clicar em "Aceitar", você declara estar de acordo com os termos e se compromete a usá-los
+                com responsabilidade e ética.
+            </p>
+        </div>
+        <div class="button-container">
+            <button onclick="acceptTerms()" class="next-button">Aceitar</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptTerms() {
+            alert("Termos aceitos. Obrigado por confirmar seu compromisso!");
+            window.location.href = 'index.html'; 
+        }
+    </script>
+</body>
+</html>
