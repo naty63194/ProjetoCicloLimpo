@@ -146,4 +146,23 @@ h1 {
     .map-container iframe {
         height: 450px;
     }
+
+
+.start-button {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 0;
+    font-size: 24px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+
 }
