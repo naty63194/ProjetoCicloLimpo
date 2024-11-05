@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault(); // Impede o envio do formulário se houver erros
     } else {
       // Redireciona após o envio bem-sucedido
-      window.location.href = 'outraPagina.html';
+      window.location.href = '.html';
     }
   });
 
