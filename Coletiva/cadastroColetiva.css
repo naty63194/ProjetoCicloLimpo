@@ -1,38 +1,35 @@
 body {
-  font-family: serif, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
   width: 100%;
   height: 100%;
-  background-color: #b8f8a5;
   background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
   background-size: 30px 30px;
-  margin: 0;
+  overflow: hidden;
+  background-position: -5px -5px;
 }
 
-.container {
+.container1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 10px;
+  width: 50%;
+  height: auto;
+  position: center;
 }
 
 .formulario {
+  maargin-top: auto;
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
+  gap: 10px;
+  max-width: 350px;
   background-color: #fff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: center;
 }
-
 
 .title {
   font-size: 28px;
@@ -86,61 +83,59 @@ form {
   text-decoration: underline rgba(46, 139, 87);
 }
 
-.message {
-  color: rgba(88, 87, 87, 0.822);
-  font-size: 14px;
-  text-align: center;
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
 }
 
 .form label {
   position: relative;
 }
 
-.form .input {
+.form label .input {
   width: 100%;
-  padding: 12px 10px 10px;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
   border: 1px solid rgba(105, 105, 105, 0.397);
   border-radius: 10px;
-  outline: none;
-  transition: border 0.3s;
 }
 
-.form .input:focus {
-  border-color: rgba(46, 139, 87);
-}
-
-.form .input:invalid {
-  border-color: red;
-}
-
-.form .input + span {
+.form label .input+span {
   position: absolute;
-  left: 12px;
-  top: 14px;
+  left: 10px;
+  top: 15px;
   color: grey;
   font-size: 0.9em;
+  cursor: text;
   transition: 0.3s ease;
-  pointer-events: none;
 }
 
-.form .input:focus + span,
-.form .input:not(:placeholder-shown) + span {
-  top: -8px;
-  left: 10px;
-  font-size: 0.75em;
-  color: rgba(46, 139, 87);
-  background-color: #fff;
-  padding: 0 4px;
+.form label .input:placeholder-shown+span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid+span {
+  color: green;
 }
 
 .submit {
-  background-color: #006400;
-  color: #fff;
   border: none;
+  outline: none;
+  background-color: #006400;
+  padding: 10px;
   border-radius: 10px;
-  padding: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
 }
 
 .submit:hover {

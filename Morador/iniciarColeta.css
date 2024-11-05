@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+.container {
+    text-align: center;
+}
+
+.start-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+
+.start-button:active {
+    background-color: #004494;
+}
+
+@media (max-width: 600px) {
+    .start-button {
+        width: 80%;
+        padding: 15px;
+        font-size: 20px;
+    }
+}

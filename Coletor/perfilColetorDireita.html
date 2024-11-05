@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Coletor</title>
+    <link rel="stylesheet" href="perfilColetor.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-info">
+                <div class="avatar"></div>
+                <div class="details">
+                    <h2>João da Silva</h2>
+                    <p>Coletor</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h3>Configurações do Perfil</h3>
+            <form id="profileForm">
+                <label for="profilePic">Mudar Foto de Perfil:</label>
+                <input type="file" id="profilePic" name="profilePic" accept="image/*">
+                
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Nome completo" required>
+                
+                <label for="vehicle">Veículo:</label>
+                <input type="text" id="vehicle" name="vehicle" placeholder="Modelo do veículo" required>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Nova senha" required>
+                
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </main>
+        <footer>
+            <nav>
+                <a href="perfilColetor.html">Home</a>
+                <a href="chatColetor.html">Chat</a>
+                <a href="perfilColetorDireita.html" class="active">Perfil</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
