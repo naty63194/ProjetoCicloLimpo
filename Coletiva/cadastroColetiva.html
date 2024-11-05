@@ -9,8 +9,8 @@
 <body>
   <div class="container">
     <form class="form">
-      <p class="title"> Cadastro da Coletiva </p>
-      <p class="message">Prencha os campos abaixo para cadastrar a sua coletiva: </p>
+      <p class="title">Cadastro da Coletiva</p>
+      <p class="message">Preencha os campos abaixo para cadastrar a sua coletiva:</p>
       <label>
         <input type="text" class="input" required placeholder=" ">
         <span class="placeholder">Nome Fantasia</span>
@@ -19,14 +19,16 @@
         <input type="text" class="input" required placeholder=" ">
         <span class="placeholder">CNPJ</span>
       </label>
-      <label>
-        <input type="text" class="input" required placeholder=" " pattern="\d{2}">
-        <span class="placeholder">DDD</span>
-      </label>
-      <label>
-        <input type="tel" class="input" required placeholder=" " pattern="\d{8,10}">
-        <span class="placeholder">Telefone Fixo</span>
-      </label>
+      <div class="flex">
+        <label class="ddd">
+          <input type="text" class="input" required placeholder=" " pattern="\d{2}">
+          <span class="placeholder">DDD</span>
+        </label>
+        <label class="telefone">
+          <input type="tel" class="input" required placeholder=" " pattern="\d{8,10}">
+          <span class="placeholder">Telefone Fixo</span>
+        </label>
+      </div>
       <label>
         <input type="email" class="input" required placeholder=" ">
         <span class="placeholder">E-mail</span>
@@ -39,10 +41,10 @@
         <input type="password" class="input" required placeholder=" ">
         <span class="placeholder">Confirmar Senha</span>
       </label>
-      <button type="submit" class="submit">Avançar</button>
+      <!-- Botão que redireciona para outra página -->
+      <button type="button" class="submit" onclick="window.location.href='outraPagina.html'">Avançar</button>
     </form>
   </div>
   <script src="cadastroColetiva.js"></script>
 </body>
-
 </html>
