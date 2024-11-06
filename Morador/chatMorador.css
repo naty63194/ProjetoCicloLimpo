@@ -39,17 +39,17 @@ header h1 {
 .search-bar {
     margin-top: 10px;
     position: relative;
-    max-width: 80%; /* Reduzindo o tamanho da barra de busca */
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .search-bar input {
     width: 100%;
-    padding: 8px 15px; /* Menor padding para compactar a barra */
+    padding: 8px 15px;
     border: 1px solid #ddd;
     border-radius: 20px;
-    font-size: 14px; /* Fonte um pouco menor */
+    font-size: 14px;
     outline: none;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     padding-left: 35px;
