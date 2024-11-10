@@ -99,5 +99,5 @@ nav a {
 }
 
 nav a.active {
-    color: #4CAF50;
+    color: #4CAF50; /* Cor de destaque para a página ativa */
 }

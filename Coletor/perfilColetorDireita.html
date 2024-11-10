@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Coletor</title>
-    <link rel="stylesheet" href="perfilColetor.css">
+    <link rel="stylesheet" href="perfilColetorDireita.css">
 </head>
 <body>
     <div class="container">
@@ -22,16 +22,24 @@
             <form id="profileForm">
                 <label for="profilePic">Mudar Foto de Perfil:</label>
                 <input type="file" id="profilePic" name="profilePic" accept="image/*">
-                
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" placeholder="Nome completo" required>
-                
-                <label for="vehicle">Veículo:</label>
-                <input type="text" id="vehicle" name="vehicle" placeholder="Modelo do veículo" required>
-                
-                <label for="password">Senha:</label>
+
+                <label for="name">Como desejo ser chamado:</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome preferido" required>
+
+                <label for="vehicle">Novo Veículo:</label>
+                <select id="vehicle" name="vehicle" required>
+                    <option value="" disabled selected>Selecione um veículo</option>
+                    <option value="carro">Carro</option>
+                    <option value="moto">Moto</option>
+                    <option value="bicicleta">Bicicleta</option>
+                </select>
+
+                <label for="password">Alterar Senha:</label>
                 <input type="password" id="password" name="password" placeholder="Nova senha" required>
-                
+
+                <label for="confirmPassword">Confirmar Senha:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirme a nova senha" required>
+
                 <button type="submit">Salvar Alterações</button>
             </form>
         </main>
