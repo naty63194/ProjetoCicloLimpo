@@ -3,15 +3,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
 }
 
 /* Container principal */
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    width: 400px; /* Largura fixa para toda a página */
+    margin: 0 auto; /* Centralizar horizontalmente */
     height: 100vh;
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombras leves */
 }
 
 /* Informações de perfil */
@@ -20,7 +23,6 @@ body {
     align-items: center;
     padding: 20px;
     background-color: #f5f5f5;
-    width: 100%;
 }
 
 .avatar {
@@ -45,8 +47,11 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    max-width: 400px;
+    width: 100%; /* Ocupa toda a largura do container */
+    max-width: 360px; /* Máximo permitido para o formulário */
+    padding: 20px; /* Espaçamento interno */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    box-sizing: border-box; /* Garante que padding seja incluído na largura */
 }
 
 form label {
@@ -57,7 +62,7 @@ form input[type="file"],
 form input[type="text"],
 form input[type="password"],
 form select {
-    padding: 10px;
+    padding: 8px; /* Botões menores */
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -72,10 +77,11 @@ form select {
 form button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 8px 20px; /* Botão menor */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    align-self: flex-end; /* Botão alinhado à direita */
 }
 
 form button:hover {
