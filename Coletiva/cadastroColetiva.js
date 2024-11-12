@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     let isValid = true;
     const dddRegex = /^\d{2}$/;
-    const telefoneRegex = /^\d{8,9}$/; // Aceita 8 ou 9 dígitos
+    const telefoneRegex = /^\d{8,9}$/; 
     const cnpjRegex = /^\d{14}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   
