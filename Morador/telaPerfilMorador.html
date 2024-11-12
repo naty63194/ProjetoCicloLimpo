@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Morador</title>
+    <link rel="stylesheet" href="telaPerfilMorador.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="side-menu" id="sideMenu">
+        <button class="close-button" onclick="toggleMenu()">×</button>
+        <nav class="side-menu-content">
+            <a href="telaHome.html">Home</a>
+            <a href="chatMorador.html">Chat</a>
+            <a href="agendaMorador.html">Agenda</a>
+            <a href="historicoMorador.html">Histórico</a>
+            <a href="telaPerfilMorador.html">Perfil</a>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="profile-icon">
+            <img src="https://via.placeholder.com/40" alt="Ícone do Perfil">
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/100" alt="Imagem de Perfil" class="profile-image">
+            <h2>Nome do Morador</h2>
+            <p class="email">email@exemplo.com</p>
+        </div>
+
+        <div class="profile-info">
+            <h3>Informações Pessoais</h3>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+            <p><strong>Endereço:</strong> Rua Exemplo, 123 - Bairro Exemplo</p>
+            <p><strong>Data de Nascimento:</strong> 01/01/1990</p>
+        </div>
+
+        <div class="profile-settings">
+            <h3>Configurações</h3>
+            <button class="setting-button">Editar Informações</button>
+            <button class="setting-button">Alterar Senha</button>
+            <button class="setting-button">Preferências de Notificação</button>
+        </div>
+
+        <div class="logout-container">
+            <button class="logout-button">Sair da Conta</button>
+        </div>
+    </div>
+
+    <script src="telaPerfilMorador.js"></script>
+</body>
+</html>

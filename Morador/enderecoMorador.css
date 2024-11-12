@@ -47,14 +47,14 @@ h1 {
     padding: 10px;
     font-size: 16px;
     border: none;
-    background-color: #007bff;
+    background-color: #3ab56f;
     color: white;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .search-bar button:hover {
-    background-color: #0056b3;
+    background-color: #2e8b57;
 }
 
 .map-container {
@@ -74,14 +74,14 @@ h1 {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    background-color: #007bff;
+    background-color: #3ab56f;
     color: white;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .next-button:hover {
-    background-color: #0056b3;
+    background-color: #2e8b57;
 }
 
 .button-container {
@@ -154,7 +154,7 @@ h1 {
     padding: 20px 0;
     font-size: 24px;
     border: none;
-    background-color: #007bff;
+    background-color: #3ab56f;
     color: white;
     border-radius: 8px;
     cursor: pointer;
@@ -162,7 +162,7 @@ h1 {
 }
 
 .start-button:hover {
-    background-color: #0056b3;
+    background-color: #2e8b57;
 }
 
 }

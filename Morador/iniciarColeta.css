@@ -19,7 +19,7 @@ body, html {
     font-size: 24px;
     font-weight: bold;
     color: white;
-    background-color: #007bff;
+    background-color: #3ab56f;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -27,11 +27,11 @@ body, html {
 }
 
 .start-button:hover {
-    background-color: #0056b3;
+    background-color: #2e8b57;
 }
 
 .start-button:active {
-    background-color: #004494;
+    background-color: #2e8b57;
 }
 
 @media (max-width: 600px) {

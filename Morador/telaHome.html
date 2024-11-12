@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="telaHome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="side-menu" id="sideMenu">
+        <button class="close-button" onclick="toggleMenu()">×</button>
+        <nav class="side-menu-content">
+            <a href="telaHome.html">Home</a>
+            <a href="chatMorador.html">Chat</a>
+            <a href="agendaMorador.html">Agenda</a>
+            <a href="historicoMorador.html">Histórico</a>
+            <a href="telaPerfilMorador.html">Perfil</a>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="profile-icon">
+            <a href="telaPerfilMorador.html"><img src="fotoPerfil.avif" alt="Ícone do Perfil"></a>
+        </div>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Pesquisar">
+        <button class="search-button">
+            <span class="search-icon">🔍</span>
+        </button>
+    </div>
+
+    <div class="quick-access-buttons">
+        <a href="chatMorador.html" class="quick-button">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat">
+            <span>Chat</span>
+        </a>
+        <a href="agenda.html" class="quick-button">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/calendar.png" alt="Agenda">
+            <span>Agenda</span>
+        </a>
+        <a href="historico.html" class="quick-button">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/todo-list.png" alt="Histórico">
+            <span>Histórico</span>
+        </a>
+    </div>
+
+    <div class="collection-cards">
+        <div class="card">
+            <img src="img_telaHome1.webp" alt="Coleta Agendada">
+            <div class="card-content">
+                <h3>COLETAS AGENDADAS</h3>
+                <span class="date">19/11/2024</span>
+                <p>Coleta diferenciada de resíduos que foram previamente separados segundo a sua constituição ou composição.</p>
+                <button class="verify-button">Verificar</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img_telaHome2.jpg" alt="Coleta Agendada">
+            <div class="card-content">
+                <h3>COLETAS AGENDADAS</h3>
+                <span class="date">19/11/2024</span>
+                <p>Coleta diferenciada de resíduos que foram previamente separados segundo a sua constituição ou composição.</p>
+                <button class="verify-button">Verificar</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img_telaHome3.jpeg" alt="Coleta Agendada">
+            <div class="card-content">
+                <h3>COLETAS AGENDADAS</h3>
+                <span class="date">19/11/2024</span>
+                <p>Coleta diferenciada de resíduos que foram previamente separados segundo a sua constituição ou composição.</p>
+                <button class="verify-button">Verificar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="telaHome.js"></script>
+</body>
+</html>
