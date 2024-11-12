@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <form method="post">
+    <form method="post" action="/cadastroColetiva" id="cadastroColetivaForm">
       <p class="title">Cadastro da Coletiva</p>
       <p class="message">Preencha os campos abaixo para cadastrar a sua coletiva:</p>
       <label>
@@ -19,16 +19,22 @@
         <input type="text" class="input" required>
         <span class="placeholder">CNPJ</span>
       </label>
-      <div class="flex">
-        <label class="ddd">
-          <input type="text" class="input" required pattern="\d{2}">
-          <span class="placeholder">DDD</span>
-        </label>
-        <label class="telefone">
-          <input type="tel" class="input" required pattern="\d{8,10}">
-          <span class="placeholder">Telefone Fixo</span>
-        </label>
+
+      <div class="phone-container">
+        <div class="flex">
+          <label class="ddd">
+            <input type="text" class="input" required pattern="\d{2}">
+            <span class="placeholder">DDD</span>
+          </label>
+          <label class="telefone">
+            <input type="tel" class="input" required pattern="\d{8,10}">
+            <span class="placeholder">Telefone Fixo</span>
+          </label>
+        </div>
+        <!--Adicionar novo telefone-->>
+        <button type="button" class="add-phone" onclick="addPhoneField()">+</button>
       </div>
+  
       <label>
         <input type="email" class="input" required>
         <span class="placeholder">E-mail</span>
@@ -44,6 +50,6 @@
       <button type="submit" class="submit">Avançar</button>
     </form>
   </div>
-  <script src="cadastroColetiva.js"></script>
+  <script src="\cadastroColetiva.js"></script>
 </body>
 </html>
