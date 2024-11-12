@@ -1,14 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".form");
-  const dddInput = form.querySelector("input[placeholder='DDD']");
-  const telefoneInput = form.querySelector("input[placeholder='Telefone Fixo']");
-  const cnpjInput = form.querySelector("input[placeholder='CNPJ']");
-  const emailInput = form.querySelector("input[type='email']");
-  const senhaInput = form.querySelector("input[placeholder='Criar Senha']");
-  const confirmarSenhaInput = form.querySelector("input[placeholder='Confirmar Senha']");
-  
+  const form = document.getElementById("cadastroColetivaForm");
+
+  // Captura dos elementos de entrada
+  const dddInput = document.getElementById("ddd");
+  const telefoneInput = document.getElementById("telefone");
+  const cnpjInput = document.getElementById("cnpj");
+  const emailInput = document.getElementById("email");
+  const senhaInput = document.getElementById("senha");
+  const confirmarSenhaInput = document.getElementById("confirmarSenha");
+
   form.addEventListener("submit", function (event) {
-    let isValid = true;
+    event.preventDefault();
+    let isValid = true; // Variável para controlar a validade geral
+
     const dddRegex = /^\d{2}$/;
     const telefoneRegex = /^\d{8,9}$/; 
     const cnpjRegex = /^\d{14}$/;
@@ -44,16 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
       isValid = false;
     }
   
-    if (!isValid) {
-      event.preventDefault(); // Impede o envio do formulário se houver erros
-    } else {
+    if (isValid) {
       // Redireciona após o envio bem-sucedido
-      window.location.href = '.html';
+      window.location.href = "/cadastroADM";
     }
   });
 
   const inputs = document.querySelectorAll(".input");
-  
+
   inputs.forEach(input => {
     input.addEventListener("input", () => {
       if (input.checkValidity()) {

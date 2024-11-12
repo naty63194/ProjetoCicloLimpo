@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Projeto Ciclo Limpo</title>
+  <link href="telaInicial.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container1">
+    <div class="bloco1">
+      <div class="ImagemLogo">
+        <img src="../img/logo.png" alt="Logo Ciclo Limpo">
+        <div class="header">
+          <h1>Bem-vindo ao Projeto Ciclo Limpo</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="bloco2">
+      <h1>Como você quer se cadastrar:</h1>
+      <div class="button-container">
+        <!-- Switch para Cadastro de Morador -->
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="moradorCheckbox" onclick="redirectToPage('../Morador/cadastroMorador.html')">
+            <span class="slider"></span>
+          </label>
+          <span class="label-text">Cadastrar como Morador</span>
+        </div>
+
+        <!-- Switch para Cadastro de Coletor -->
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="coletorCheckbox" onclick="redirectToPage('../Coletor/cadastroColetor.html')">
+            <span class="slider"></span>
+          </label>
+          <span class="label-text">Cadastrar como Coletor</span>
+        </div>
+      </div>
+      <div class="click-button">
+        <button onclick="window.location.href = '../Coletiva/cadastroColetiva.html'">
+          <span>Cadastro das Coletivas</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="telainical.js"></script>
+</body>
+
+</html>
