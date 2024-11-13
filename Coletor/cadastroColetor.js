@@ -6,7 +6,7 @@ document.getElementById("collectorForm").addEventListener("submit", function(eve
     // Exemplo de validação simples: checar se o ID tem pelo menos 3 caracteres
     if (collectorId.length >= 3) {
         // Redireciona para a próxima página ao validar o ID com sucesso
-        window.location.href = "perfilColetor.html"; // Verifique se o caminho está correto
+        window.location.href = "homeColetor.html"; // Verifique se o caminho está correto
     } else {
         alert("Por favor, insira um ID válido com pelo menos 3 caracteres.");
     }
