@@ -16,8 +16,7 @@ body {
     margin: 0;
     overflow: hidden;
 }
-  
-  
+   
 .container {
     display: flex;
     width: 80%;
@@ -38,7 +37,7 @@ form {
   }
   
 
-.title {
+.textoInicial {
     font-size: 28px;
     color: #2e8b57;
     font-weight: 600;
@@ -50,8 +49,8 @@ form {
     margin-bottom: 10px;
 }
   
-.title::before,
-.title::after {
+.textoInicial::before,
+.textoInicial::after {
     position: absolute;
     content: "";
     height: 18px;
@@ -61,11 +60,11 @@ form {
     background-color: rgba(46, 139, 87);
 }
   
-.title::after {
+.textoInicial::after {
     animation: pulse 1s linear infinite;
 }
   
-.message,
+.subTitulo,
 .signin {
     color: #585757;
     font-size: 14px;

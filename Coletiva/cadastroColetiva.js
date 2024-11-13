@@ -1,68 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("cadastroColetivaForm");
 
-  // Captura dos elementos de entrada
-  const dddInput = document.getElementById("ddd");
-  const telefoneInput = document.getElementById("telefone");
-  const cnpjInput = document.getElementById("cnpj");
-  const emailInput = document.getElementById("email");
-  const senhaInput = document.getElementById("senha");
-  const confirmarSenhaInput = document.getElementById("confirmarSenha");
+  // Função de preenchimento automático usando IDs dos campos
+  function autoFillForm() {
+    document.getElementById("nomeFantasia").value = "Cooperativa Verde";
+    document.getElementById("cnpj").value = "12345678000199";
+    document.getElementById("ddd").value = "91";
+    document.getElementById("telefone").value = "12345678";
+    document.getElementById("email").value = "contato@cooperativaverde.com";
+    document.getElementById("senha").value = "senha123";
+    document.getElementById("confirmarSenha").value = "senha123";
+  }
+
+  // Chama a função de preenchimento automático ao carregar a página
+  autoFillForm();
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    let isValid = true; // Variável para controlar a validade geral
-
-    const dddRegex = /^\d{2}$/;
-    const telefoneRegex = /^\d{8,9}$/; 
-    const cnpjRegex = /^\d{14}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
-    // Validação DDD
-    if (!dddRegex.test(dddInput.value)) {
-      alert("DDD inválido. Digite 2 dígitos.");
-      isValid = false;
-    }
-  
-    // Validação Telefone
-    if (!telefoneRegex.test(telefoneInput.value)) {
-      alert("Telefone inválido. Digite 8 ou 9 dígitos.");
-      isValid = false;
-    }
-  
-    // Validação CNPJ
-    if (!cnpjRegex.test(cnpjInput.value)) {
-      alert("CNPJ inválido. Deve ter 14 dígitos.");
-      isValid = false;
-    }
-  
-    // Validação Email
-    if (!emailRegex.test(emailInput.value)) {
-      alert("Email inválido. Digite um formato correto.");
-      isValid = false;
-    }
-  
-    // Validação Senhas
-    if (senhaInput.value !== confirmarSenhaInput.value) {
-      alert("As senhas não coincidem.");
-      isValid = false;
-    }
-  
-    if (isValid) {
-      // Redireciona após o envio bem-sucedido
-      window.location.href = "/cadastroADM";
-    }
+    // Redireciona para a página HTML de sucesso
+    window.location.href = "http://127.0.0.1:3000/Coletiva/cadastroADM.html";
   });
 
-  const inputs = document.querySelectorAll(".input");
+  // Função para adicionar um novo campo de telefone e esconder o botão "+"
+  function addPhoneField() {
+    const phoneContainer = document.querySelector(".phone-container");
 
-  inputs.forEach(input => {
-    input.addEventListener("input", () => {
-      if (input.checkValidity()) {
-        input.style.borderColor = "rgba(46, 139, 87)"; // Verde se válido
-      } else {
-        input.style.borderColor = "red"; // Vermelho se inválido
-      }
-    });
-  });
+    const newPhoneField = document.createElement("label");
+    newPhoneField.innerHTML = `
+      <input type="tel" class="input" required pattern="\\d{8,10}">
+      <span class="placeholder">Telefone</span>
+    `;
+    
+    phoneContainer.appendChild(newPhoneField);
+
+    // Esconde o botão após adicionar o campo
+    document.querySelector(".add-phone").style.display = "none";
+  }
+
+  // Expõe a função para o botão "+"
+  window.addPhoneField = addPhoneField;
 });

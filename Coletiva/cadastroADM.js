@@ -1,69 +1,39 @@
-function redirectToPage(url) {
-    window.location.href = url;
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("cadastroADMForm");
+
+  // Função de preenchimento automático usando IDs dos campos
+  function autoFillForm() {
+    document.getElementById("nomeADM").value = "NATALIA MACEDO";
+    document.getElementById("cpfADM").value = "58471526489";
+    document.getElementById("dddADM").value = "91";
+    document.getElementById("telefoneADM").value = "123458795";
+    document.getElementById("emailADM").value = "contato@cooperativaverde3.com";
+    document.getElementById("senhaADM").value = "senha123";
+    document.getElementById("confirmarSenhaADM").value = "senha123";
   }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".form");
-    const dddInput = form.querySelector("input[placeholder='DDD']");
-    const telefoneInput = form.querySelector("input[placeholder='Telefone']");
-    const cpfInput = form.querySelector("input[placeholder='CPF']");
-    const emailInput = form.querySelector("input[type='email']");
-    const senhaInput = form.querySelector("input[placeholder='Criar Senha']");
-    const confirmarSenhaInput = form.querySelector("input[placeholder='Confirmar Senha']");
-    
-    form.addEventListener("submit", function (event) {
-      let isValid = true;
-      const dddRegex = /^\d{2}$/;
-      const telefoneRegex = /^\d{8,9}$/; 
-      const cpfRegex = /^\d{11}$/;
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
-      // Validação DDD
-      if (!dddRegex.test(dddInput.value)) {
-        alert("DDD inválido. Digite 2 dígitos.");
-        isValid = false;
-      }
-    
-      // Validação Telefone
-      if (!telefoneRegex.test(telefoneInput.value)) {
-        alert("Telefone inválido. Digite 9 dígitos.");
-        isValid = false;
-      }
-    
-      // Validação CNPJ
-      if (!cpfRegex.test(cpfInput.value)) {
-        alert("CNPJ inválido. Deve ter 14 dígitos.");
-        isValid = false;
-      }
-    
-      // Validação Email
-      if (!emailRegex.test(emailInput.value)) {
-        alert("Email inválido. Digite um formato correto.");
-        isValid = false;
-      }
-    
-      // Validação Senhas
-      if (senhaInput.value !== confirmarSenhaInput.value) {
-        alert("As senhas não coincidem.");
-        isValid = false;
-      }
-    
-      if (!isValid) {
-        event.preventDefault(); // Impede o envio do formulário se houver erros
-      } else {
-        window.location.href = 'termosDados.html';
-      }
-    });
-  
-    const inputs = document.querySelectorAll(".input");
-    
-    inputs.forEach(input => {
-      input.addEventListener("input", () => {
-        if (input.checkValidity()) {
-          input.style.borderColor = "rgba(46, 139, 87)"; // Verde se válido
-        } else {
-          input.style.borderColor = "red"; // Vermelho se inválido
-        }
-      });
-    });
+  // Chama a função de preenchimento automático ao carregar a página
+  autoFillForm();
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    // Redireciona para a página HTML de sucesso
+    window.location.href = "http://127.0.0.1:3000/Coletiva/termosDados.html";
   });
+
+  // Função para adicionar um novo campo de telefone e esconder o botão "+"
+  window.addPhoneField = function () {
+    const phoneContainer = document.querySelector(".phone-container");
+
+    const newPhoneField = document.createElement("label");
+    newPhoneField.innerHTML = `
+      <input type="tel" class="input" required pattern="\\d{8,10}">
+      <span class="placeholder">Telefone</span>
+    `;
+
+    phoneContainer.appendChild(newPhoneField);
+
+    // Esconde o botão após adicionar o campo
+    document.querySelector(".add-phone").style.display = "none";
+  };
+});

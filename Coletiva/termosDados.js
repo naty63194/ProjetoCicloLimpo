@@ -7,5 +7,4 @@ const agreeTerms = document.getElementById('agreeTerms');
 
     submitBtn.addEventListener('click', function() {
       alert('Cadastro concluído com sucesso!');
-      // Aqui você pode redirecionar o usuário ou executar outras ações
     });

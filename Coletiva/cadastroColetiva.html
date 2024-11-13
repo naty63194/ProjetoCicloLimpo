@@ -8,48 +8,49 @@
 </head>
 <body>
   <div class="container">
-    <form method="post" action="/cadastroColetiva" id="cadastroColetivaForm">
-      <p class="title">Cadastro da Coletiva</p>
-      <p class="message">Preencha os campos abaixo para cadastrar a sua coletiva:</p>
+    <form id="cadastroColetivaForm">
+      <p class="textoInicial">Cadastro da Coletiva</p>
+      <p class="subTitulo">Preencha os campos abaixo para cadastrar a sua coletiva:</p>
       <label>
-        <input type="text" class="input" required>
+        <input type="text" id="nomeFantasia" class="input" required>
         <span class="placeholder">Nome Fantasia</span>
       </label>
       <label>
-        <input type="text" class="input" required>
+        <input type="text" id="cnpj" class="input" required pattern="\d{14}">
         <span class="placeholder">CNPJ</span>
       </label>
 
       <div class="phone-container">
         <div class="flex">
           <label class="ddd">
-            <input type="text" class="input" required pattern="\d{2}">
+            <input type="text" id="ddd" class="input small-input" required pattern="\d{2}">
             <span class="placeholder">DDD</span>
           </label>
           <label class="telefone">
-            <input type="tel" class="input" required pattern="\d{8,10}">
-            <span class="placeholder">Telefone Fixo</span>
+            <input type="tel" id="telefone" class="input" required pattern="\d{8,10}">
+            <span class="placeholder">Telefone</span>
           </label>
         </div>
-        <!--Adicionar novo telefone-->>
-        <button type="button" class="add-phone" onclick="addPhoneField()">+</button>
+          <!-- Adicionar novo telefone -->
+          <button type="button" class="add-phone" onclick="addPhoneField()">+</button>
       </div>
-  
+
       <label>
-        <input type="email" class="input" required>
+        <input type="email" id="email" class="input" required>
         <span class="placeholder">E-mail</span>
       </label>
       <label>
-        <input type="password" class="input" required>
+        <input type="password" id="senha" class="input" required>
         <span class="placeholder">Criar Senha</span>
       </label>
       <label>
-        <input type="password" class="input" required>
+        <input type="password" id="confirmarSenha" class="input" required>
         <span class="placeholder">Confirmar Senha</span>
       </label>
       <button type="submit" class="submit">Avançar</button>
     </form>
   </div>
-  <script src="\cadastroColetiva.js"></script>
+
+  <script src="cadastroColetiva.js"></script>
 </body>
 </html>
