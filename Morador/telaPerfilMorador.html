@@ -11,6 +11,7 @@
 </head>
 <body>
 
+    <!-- Menu Lateral -->
     <div class="side-menu" id="sideMenu">
         <button class="close-button" onclick="toggleMenu()">×</button>
         <nav class="side-menu-content">
@@ -22,20 +23,23 @@
         </nav>
     </div>
 
+    <!-- Cabeçalho -->
     <header class="header">
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Ícone do menu -->
         <div class="profile-icon">
-            <img src="https://via.placeholder.com/40" alt="Ícone do Perfil">
+            <img src="fotoPerfil.avif" alt="Ícone do Perfil">
         </div>
     </header>
 
+    <!-- Container de Perfil -->
     <div class="profile-container">
         <div class="profile-header">
-            <img src="https://via.placeholder.com/100" alt="Imagem de Perfil" class="profile-image">
+            <img src="fotoPerfil.avif" alt="Imagem de Perfil" class="profile-image">
             <h2>Nome do Morador</h2>
             <p class="email">email@exemplo.com</p>
         </div>
 
+        <!-- Informações Pessoais -->
         <div class="profile-info">
             <h3>Informações Pessoais</h3>
             <p><strong>Telefone:</strong> (11) 1234-5678</p>
@@ -43,15 +47,17 @@
             <p><strong>Data de Nascimento:</strong> 01/01/1990</p>
         </div>
 
+        <!-- Configurações -->
         <div class="profile-settings">
             <h3>Configurações</h3>
-            <button class="setting-button">Editar Informações</button>
-            <button class="setting-button">Alterar Senha</button>
-            <button class="setting-button">Preferências de Notificação</button>
+            <a href="editarInformacoes.html" class="setting-button">Editar Informações</a>
+            <a href="alterarSenha.html" class="setting-button">Alterar Senha</a>
+            <a href="preferenciasNotificacao.html" class="setting-button">Preferências de Notificação</a>
         </div>
 
+        <!-- Botão de Logout -->
         <div class="logout-container">
-            <button class="logout-button">Sair da Conta</button>
+            <a href="sairDaConta.html" class="logout-button">Sair da Conta</a>
         </div>
     </div>
 
