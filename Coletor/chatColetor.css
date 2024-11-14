@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: serif, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+    font-family: Arial, sans-serif;
     background-color: #f0f2f5;
     display: flex;
     justify-content: center;
@@ -26,41 +26,87 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Cabeçalho */
-header {
+/* Barra Superior */
+.top-bar {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 20px;
-    text-align: center;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
 }
 
-header h2 {
+.top-bar h2 {
     margin: 0;
     font-size: 1.5em;
+    flex-grow: 1;
+    text-align: center;
 }
 
-header .search-bar {
-    margin-top: 10px;
+.search-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 5px;
 }
 
-header input {
-    width: 85%;
-    padding: 8px;
+.search-bar input {
+    padding: 5px;
     border: none;
     border-radius: 20px;
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
 }
 
-header img {
-    width: 20px;
-    height: 20px;
+.search-bar button {
+    background: white;
+    border: none;
+    color: #4CAF50;
+    border-radius: 50%;
+    padding: 5px;
     cursor: pointer;
+}
+
+/* Botão de Menu */
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Menu Lateral */
+.side-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #e0e0e0;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.side-menu nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.side-menu nav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Quando o menu estiver visível */
+.side-menu.visible {
+    transform: translateX(0);
 }
 
 /* Área Principal */
@@ -85,7 +131,6 @@ main {
     border-radius: 50%;
     overflow: hidden;
     background-color: #ccc;
-    flex-shrink: 0;
 }
 
 .avatar img {

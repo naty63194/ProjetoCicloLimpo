@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <link rel="stylesheet" href="chatColetor.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <!-- Cabeçalho -->
-        <header>
+        <header class="top-bar">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <h2>Chat</h2>
             <div class="search-bar">
                 <input type="text" placeholder="Pesquisar">
-                <img src="insira-imagem-aqui" alt="Ícone de Pesquisa">
+                <button><i class="fas fa-search"></i></button>
             </div>
         </header>
+
+        <!-- Menu Lateral -->
+        <aside class="side-menu hidden">
+            <nav>
+                <a href="homeColetor.html"><i class="fas fa-home"></i> Home</a>
+                <a href="chatColetor.html" class="active"><i class="fas fa-comments"></i> Chat</a>
+                <a href="perfilColetor.html"><i class="fas fa-user"></i> Perfil</a>
+            </nav>
+        </aside>
 
         <!-- Área Principal -->
         <main>
@@ -44,11 +57,13 @@
         <!-- Rodapé -->
         <footer>
             <nav>
-                <a href="homeColetor.html">Home</a>
-                <a href="chatColetor.html" class="active">Chat</a>
-                <a href="perfilColetor.html">Perfil</a>
+                <a href="homeColetor.html"><i class="fas fa-home"></i> Home</a>
+                <a href="chatColetor.html" class="active"><i class="fas fa-comments"></i> Chat</a>
+                <a href="perfilColetor.html"><i class="fas fa-user"></i> Perfil</a>
             </nav>
         </footer>
     </div>
+
+    <script src="homeColetor.js"></script>
 </body>
 </html>

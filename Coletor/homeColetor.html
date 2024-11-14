@@ -5,40 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Coletor</title>
     <link rel="stylesheet" href="homeColetor.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Para usar ícones -->
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="profile-info">
-                <div class="avatar"></div>
-                <div class="details">
-                    <h2>João da Silva</h2>
-                    <p>Coletor</p>
-                </div>
+        <!-- Barra Superior -->
+        <header class="top-bar">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> <!-- Ícone de Menu -->
+            </button>
+            <h1>Ciclo Limpo</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar">
+                <button><i class="fas fa-search"></i></button>
             </div>
         </header>
-        <main>
-            <h3>Trajeto Disponível</h3>
-            <div class="route-card">
-                <p>Partida em: 05 de Nov. 2024, 12:30</p>
-                <p>Destino: Rua João Machado, 123</p>
-                <button>Iniciar</button>
-                <button>Recusar</button>
-            </div>
-            <div class="route-card">
-                <p>Partida em: 06 de Nov. 2024, 07:00</p>
-                <p>Destino: Rua Frei Tadeu, 789</p>
-                <button>Iniciar</button>
-                <button>Recusar</button>
-            </div>
-        </main>
-        <footer>
+
+        <!-- Menu Lateral -->
+        <aside class="side-menu hidden">
             <nav>
-                <a href="perfilColetor.html" class="active">Home</a>
-                <a href="chatColetor.html">Chat</a>
-                <a href="perfilColetorDireita.html">Perfil</a>
+                <a href="perfilColetor.html" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="chatColetor.html"><i class="fas fa-comments"></i> Chat</a>
+                <a href="perfilColetorDireita.html"><i class="fas fa-user"></i> Perfil</a>
             </nav>
-        </footer>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <div class="content">
+            <main>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="img1.jpg" alt="Lixeira Reciclagem">
+                        <h3>Coletas Agendadas</h3>
+                        <p>19/11/2024</p>
+                        <p>Coleta diferenciada de resíduos previamente separados segundo sua composição.</p>
+                    </div>
+                    <div class="card">
+                        <img src="img2.jpg" alt="Equipe de Coleta">
+                        <h3>Coletas Agendadas</h3>
+                        <p>19/11/2024</p>
+                        <p>Coleta diferenciada de resíduos previamente separados segundo sua composição.</p>
+                    </div>
+                    <div class="card">
+                        <img src="img3.jpg" alt="Materiais Recicláveis">
+                        <h3>Coletas Agendadas</h3>
+                        <p>19/11/2024</p>
+                        <p>Coleta diferenciada de resíduos previamente separados segundo sua composição.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
+
+    <script src="menu.js"></script>
 </body>
 </html>
