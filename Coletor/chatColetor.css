@@ -76,38 +76,7 @@ body {
     cursor: pointer;
 }
 
-/* Menu Lateral */
-.side-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #e0e0e0;
-    padding: 20px;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-}
 
-.side-menu nav a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-    font-size: 1em;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.side-menu nav a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-/* Quando o menu estiver visível */
-.side-menu.visible {
-    transform: translateX(0);
-}
 
 /* Área Principal */
 main {
@@ -163,24 +132,61 @@ main {
     text-align: right;
 }
 
-/* Rodapé */
-footer {
-    background-color: #e0e0e0;
-    padding: 10px 0;
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #3ab56f;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
 }
 
-nav {
+.side-menu-content {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-left: 20px;
 }
 
-nav a {
+.side-menu-content a {
+    color: white;
+    font-size: 18px;
     text-decoration: none;
-    font-size: 1em;
-    color: #333;
+    margin: 10px 0;
+    display: block;
+    transition: color 0.2s;
 }
 
-nav a.active {
-    color: #4CAF50;
-    font-weight: bold;
+.side-menu-content a:hover {
+    color: #ffd700;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.side-menu.active {
+    left: 0; /* Faz o menu deslizar para dentro da tela */
+}
+
+.menu-icon {
+    margin-right: auto; /* Move o ícone para o início da barra */
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
