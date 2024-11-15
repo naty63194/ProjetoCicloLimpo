@@ -31,11 +31,10 @@ body {
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantenha o espaço entre título e pesquisa */
 }
-
 .top-bar h1 {
-    font-size: 1.5em;
+    font-size: 1.5em;  
 }
 
 .search-box {
@@ -51,55 +50,11 @@ body {
 }
 
 .search-box button {
-    background-color: #fff;
     color: #4CAF50;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-}
-
-/* Botão de Menu */
-.menu-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-/* Menu Lateral */
-.side-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #e0e0e0;
-    padding: 20px;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-}
-
-.side-menu nav a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-    font-size: 1em;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.side-menu nav a.active {
-    background-color: #4CAF50;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Quando o menu estiver visível */
-.side-menu.visible {
-    transform: translateX(0);
 }
 
 /* Conteúdo Principal */
@@ -148,4 +103,63 @@ body {
     .search-box input {
         margin-bottom: 5px;
     }
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #3ab56f;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-left: 20px;
+}
+
+.side-menu-content a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+    transition: color 0.2s;
+}
+
+.side-menu-content a:hover {
+    color: #ffd700;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.side-menu.active {
+    left: 0; /* Faz o menu deslizar para dentro da tela */
+}
+
+.menu-icon {
+    margin-right: auto; /* Move o ícone para o início da barra */
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }

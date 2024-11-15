@@ -1,4 +1,4 @@
 function toggleMenu() {
-    const menu = document.querySelector('.side-menu');
-    menu.classList.toggle('visible');
+    const sideMenu = document.getElementById("sideMenu");
+    sideMenu.classList.toggle("active");
 }
