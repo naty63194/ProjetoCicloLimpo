@@ -23,7 +23,7 @@ body, html {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .start-button:hover {
@@ -32,12 +32,21 @@ body, html {
 
 .start-button:active {
     background-color: #2e8b57;
+    transform: scale(0.98);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .start-button {
-        width: 80%;
+        width: 90%;
         padding: 15px;
         font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .start-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
     }
 }
