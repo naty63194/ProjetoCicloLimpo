@@ -70,7 +70,6 @@ header h1 {
     color: #888;
 }
 
-
 .chat-list {
     padding: 10px 20px;
     overflow-y: auto;
@@ -120,7 +119,6 @@ header h1 {
     display: block;
 }
 
-
 .bottom-nav {
     display: flex;
     justify-content: space-around;
@@ -155,4 +153,84 @@ header h1 {
 
 .nav-item:hover {
     color: #2e8b57;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .chat-container {
+        height: 100vh; 
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .search-bar {
+        max-width: 90%;
+    }
+
+    .chat-item {
+        padding: 10px 0;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat-info h2 {
+        font-size: 16px;
+    }
+
+    .chat-info p {
+        font-size: 12px;
+    }
+
+    .time {
+        font-size: 10px;
+    }
+
+    .bottom-nav .nav-item {
+        font-size: 12px;
+    }
+
+    .bottom-nav .icon {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .search-bar {
+        max-width: 100%;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .chat-info h2 {
+        font-size: 14px;
+    }
+
+    .chat-info p {
+        font-size: 11px;
+    }
+
+    .time {
+        font-size: 9px;
+    }
+
+    .bottom-nav .nav-item {
+        font-size: 10px;
+    }
+
+    .bottom-nav .icon {
+        font-size: 16px;
+    }
 }
