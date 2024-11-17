@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: serif, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+    font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier Bold, Courier, Georgia;
     background-color: #f0f2f5;
 }
 
