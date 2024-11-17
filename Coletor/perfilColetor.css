@@ -8,31 +8,93 @@ body {
 
 /* Container principal */
 .container {
-    width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
+    max-width: 800px; /* Define uma largura máxima para telas grandes */
+    width: 100%; /* Preenche toda a largura disponível */
+    margin: 0 auto; /* Centraliza o container */
+    background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding: 10px; /* Espaçamento interno */
 }
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%; /* Permite que o container ocupe toda a largura da tela */
+        padding: 0; /* Remove o espaçamento lateral */
+    }
+
+    .profile-info {
+        flex-direction: column; /* Empilha o avatar e os detalhes em telas pequenas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar {
+        margin-right: 0; /* Remove o espaçamento lateral */
+        margin-bottom: 10px; /* Adiciona um espaçamento inferior */
+    }
+
+    .details {
+        text-align: center; /* Centraliza os textos */
+    }
+}
+
+/* Barra Superior */
+.top-bar {
+    background-color: #4caf50; /* Cor verde */
+    color: white;             /* Cor do texto */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre botão e título */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: white; /* Cor branca para contraste */
+}
+
+.menu-icon {
+    margin-right: auto; /* Move o ícone para o início da barra */
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
 
 /* Informações do Perfil */
 .profile-info {
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     border-bottom: 1px solid #ddd;
+    flex-wrap: wrap; /* Garante que os elementos fiquem em linhas diferentes em telas menores */
 }
 
+/* Avatar */
 .avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin-right: 15px;
+    width: 100px; /* Aumenta o tamanho do avatar */
+    height: 100px;
+    margin-right: 20px; /* Espaçamento entre o avatar e os detalhes */
 }
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem preencha o espaço sem distorção */
+}
+
 
 .details h2 {
     margin: 0;
@@ -156,4 +218,8 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
+}
+
+.sem-sublinhado {
+    text-decoration: none;
 }

@@ -16,45 +16,57 @@ body {
 
 .container {
     width: 100%;
-    max-width: 800px;
-    height: 100%;
+    max-width: 800px; /* Limita a largura máxima em telas grandes */
+    height: 100%; /* Preenche a altura total da tela */
     background-color: #fff;
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow: hidden; /* Impede rolagem dentro do container */
 }
 
 /* Barra Superior */
 .top-bar {
     background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
+    color: white;
+    padding: 15px 20px; /* Aumenta os espaços laterais */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Mantenha o espaço entre título e pesquisa */
-}
-.top-bar h1 {
-    font-size: 1.5em;  
+    justify-content: space-between;
+    position: relative;
 }
 
-.search-box {
+.top-bar h2 {
+    margin: 0;
+    font-size: 1.8em; /* Maior para acompanhar a largura */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-bar {
     display: flex;
     align-items: center;
+    gap: 10px; /* Espaço entre o campo e o botão */
+    width: 100%; /* Permite que a barra ocupe todo o espaço disponível */
 }
 
-.search-box input {
-    padding: 5px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 5px;
+.search-bar input {
+    padding: 10px 15px; /* Espaçamento interno maior */
+    border: 1px solid #ccc; /* Define uma borda leve */
+    border-radius: 20px; /* Deixa as bordas curvas */
+    outline: none;
+    flex-grow: 1; /* Faz o campo de texto ocupar o máximo possível do espaço */
+    font-size: 1em; /* Aumenta o tamanho da fonte */
 }
 
-.search-box button {
-    color: #4CAF50;
+.search-bar button {
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do ícone ou texto */
     border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
+    border-radius: 20px; /* Bordas curvas iguais ao campo */
+    padding: 10px 15px; /* Espaçamento interno */
     cursor: pointer;
+    font-size: 1em; /* Ajusta o tamanho do ícone ou texto */
 }
 
 /* Conteúdo Principal */
@@ -104,13 +116,16 @@ body {
 
 /* Responsividade */
 @media (max-width: 600px) {
-    .search-box {
-        flex-direction: column;
-        align-items: stretch;
+    .cards-container {
+        flex-direction: column; /* Empilha os cartões verticalmente */
     }
 
-    .search-box input {
-        margin-bottom: 5px;
+    .card {
+        width: 100%; /* Cartões ocupam a largura completa */
+    }
+
+    .top-bar h2 {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
     }
 }
 
