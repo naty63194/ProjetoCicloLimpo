@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier Bold, Courier, Georgia;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .logo-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #2e8b57;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .textoInicial {
+    font-size: 22px;
+    color: #2e8b57;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .blocoForm {
+    width: 100%;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  label {
+    position: relative;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    outline: 0;
+  }
+  
+  .placeholder {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9em;
+    color: grey;
+    transition: 0.3s ease;
+  }
+  
+  .input:focus + .placeholder,
+  .input:not(:placeholder-shown) + .placeholder {
+    top: -10px;
+    font-size: 0.75em;
+    color: #2e8b57;
+    background-color: #fff;
+    padding: 0 5px;
+  }
+  
+  .submit {
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit:hover {
+    background-color: #006400;
+  }
+  
+  .redirect-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #585757;
+  }
+  
+  .redirect-text a {
+    color: #2e8b57;
+    text-decoration: none;
+  }
+  

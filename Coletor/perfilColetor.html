@@ -6,18 +6,36 @@
     <title>Perfil do Morador</title>
     <link rel="stylesheet" href="perfilColetor.css">
 </head>
+
 <body>
     <div class="container">
+
         <!-- Cabeçalho -->
         <header>
-            <div class="profile-info">
-                <div class="avatar"></div>
-                <div class="details">
-                    <h2>Nome do Morador</h2>
-                    <p>email@exemplo.com</p>
-                </div>
-            </div>
+            
+            <button class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars">=</i>
+            </button>
+
         </header>
+        
+        <div class="profile-info">
+            <div class="avatar"></div>
+            <div class="details">
+                <h2>Nome do Morador</h2>
+                <p>email@exemplo.com</p>
+            </div>
+        </div>
+
+        <!-- Menu Lateral -->
+        <div class="side-menu" id="sideMenu">
+            <button class="close-button" onclick="toggleMenu()">×</button>
+            <nav class="side-menu-content">
+                <a href="homeColetor.html">Home</a>
+                <a href="chatColetor.html">Chat</a>
+                <a href="perfilColetor.html">Perfil</a>
+            </nav>
+        </div>
 
         <!-- Informações Pessoais -->
         <main>
@@ -34,18 +52,11 @@
                 <button>Editar Informações</button>
                 <button>Alterar Senha</button>
                 <button>Preferências de Notificação</button>
-                <button class="logout">Sair da Conta</button>
+                <a href="/homePage.html"><button class="logout">Sair da Conta</button></a>
             </section>
         </main>
-
-        <!-- Rodapé -->
-        <footer>
-            <nav>
-                <a href="homeColetor.html">Home</a>
-                <a href="chatColetor.html">Chat</a>
-                <a href="perfilColetor.html" class="active">Perfil</a>
-            </nav>
-        </footer>
-    </div>
+    
+    <script src="sidemenuColetor.js"></script>
 </body>
+
 </html>

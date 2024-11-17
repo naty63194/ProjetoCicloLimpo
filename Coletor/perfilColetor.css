@@ -1,6 +1,6 @@
 /* Geral */
 body {
-    font-family: serif, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+    font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier Bold, Courier, Georgia;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -99,25 +99,61 @@ body {
     background-color: #d32f2f;
 }
 
-/* Rodapé */
-footer {
-    background-color: #e0e0e0;
-    padding: 10px;
-    border-top: 1px solid #ddd;
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color:#4CAF50;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
 }
 
-nav {
+.side-menu-content {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-left: 20px;
 }
 
-nav a {
+.side-menu-content a {
+    color: white;
+    font-size: 18px;
     text-decoration: none;
-    font-size: 1rem;
-    color: #333;
+    margin: 10px 0;
+    display: block;
+    transition: color 0.2s;
 }
 
-nav a.active {
-    color: #4CAF50;
-    font-weight: bold;
+.side-menu-content a:hover {
+    color: #ffd700;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.side-menu.active {
+    left: 0; /* Faz o menu deslizar para dentro da tela */
+}
+
+.menu-icon {
+    margin-right: auto; /* Move o ícone para o início da barra */
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }

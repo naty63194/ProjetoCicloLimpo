@@ -5,40 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Coletor</title>
     <link rel="stylesheet" href="homeColetor.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Para usar ícones -->
 </head>
+
 <body>
     <div class="container">
-        <header>
-            <div class="profile-info">
-                <div class="avatar"></div>
-                <div class="details">
-                    <h2>João da Silva</h2>
-                    <p>Coletor</p>
-                </div>
+        <!-- Barra Superior -->
+        <header class="top-bar">
+            <button class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars">=</i>
+            </button>
+            <h2>Home</h2>
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar">
+                <button><i class="fas fa-search">🔍</i></button>
             </div>
+            <!-- Botão para abrir o menu lateral -->
+            
         </header>
-        <main>
-            <h3>Trajeto Disponível</h3>
-            <div class="route-card">
-                <p>Partida em: 05 de Nov. 2024, 12:30</p>
-                <p>Destino: Rua João Machado, 123</p>
-                <button>Iniciar</button>
-                <button>Recusar</button>
-            </div>
-            <div class="route-card">
-                <p>Partida em: 06 de Nov. 2024, 07:00</p>
-                <p>Destino: Rua Frei Tadeu, 789</p>
-                <button>Iniciar</button>
-                <button>Recusar</button>
-            </div>
-        </main>
-        <footer>
-            <nav>
-                <a href="perfilColetor.html" class="active">Home</a>
+        
+        <!-- Menu Lateral -->
+        <div class="side-menu" id="sideMenu">
+            <button class="close-button" onclick="toggleMenu()">×</button>
+            <nav class="side-menu-content">
+                <a href="homeColetor.html">Home</a>
                 <a href="chatColetor.html">Chat</a>
-                <a href="perfilColetorDireita.html">Perfil</a>
+                <a href="perfilColetor.html">Perfil</a>
             </nav>
-        </footer>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="content">
+            <main>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="Imagem_I_home.jpeg" alt="Lixeira Reciclagem">
+                        <h3>Coletas Agendadas</h3>
+                        <p>21/11/2024</p>
+                        <p>Coleta será iniciada na Travessa WE 30 com Travessa A.</p>
+                        <div class="card-buttons">
+                            <button class="accept-btn">Aceitar</button>
+                            <button class="decline-btn" onclick="removeCard(this)">Recusar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="Imagem_II_home.jpeg" alt="Equipe de Coleta">
+                        <h3>Coletas Agendadas</h3>
+                        <p>20/11/2024</p>
+                        <p>Coleta será iniciada na Rua Providência com Travessa WE 37.</p>
+                        <div class="card-buttons">
+                            <button class="accept-btn">Aceitar</button>
+                            <button class="decline-btn" onclick="removeCard(this)">Recusar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="Imagem_III_home.jpeg" alt="Materiais Recicláveis">
+                        <h3>Coletas Agendadas</h3>
+                        <p>25/11/2024</p>
+                        <p>Coleta será iniciada na Avenida Nonato Sanova com Travessa WE 32.</p>
+                        <div class="card-buttons">
+                            <button class="accept-btn">Aceitar</button>
+                            <button class="decline-btn" onclick="removeCard(this)">Recusar</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
+
+    <script src="sidemenuColetor.js"></script>
+    <script src="removecard.js"></script>
 </body>
 </html>

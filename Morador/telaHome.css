@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier Bold, Courier, Georgia;
     background-color: #f3f4f6;
 }
 
@@ -210,4 +210,3 @@ body, html {
 .side-menu.active {
     left: 0; 
 }
-
