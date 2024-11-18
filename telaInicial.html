@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto Ciclo Limpo</title>
   <link href="telaInicial.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/img/logoColetiva.png" type="image/x-icon">
 </head>
 
 <body>
   <div class="container1">
 
-    <!-- Bloco superior com logo e título -->
     <div class="bloco1">
       <div class="ImagemLogo">
         <img src="img/logo.png" alt="Logo Ciclo Limpo">
@@ -20,12 +20,10 @@
       </div>
     </div>
 
-    <!-- Bloco de seleção de cadastro -->
     <div class="bloco2">
       <h2>Como você quer se cadastrar:</h2>
       <div class="button-container">
 
-        <!-- Switch para Cadastro de Morador -->
         <div class="switch-container">
           <label class="switch">
             <input type="checkbox" id="moradorCheckbox" onclick="window.location.href = '../Morador/enderecoMorador.html'">
@@ -34,7 +32,6 @@
           <span class="label-text">Cadastrar como Morador</span>
         </div>
 
-        <!-- Switch para Cadastro de Coletor -->
         <div class="switch-container">
           <label class="switch">
             <input type="checkbox" id="coletorCheckbox" onclick="window.location.href = '../Coletor/cadastroColetor.html'">
@@ -43,8 +40,7 @@
           <span class="label-text">Cadastrar como Coletor</span>
         </div>
       </div>
-
-      <!-- Botão para Cadastro de Coletiva -->
+      
       <div class="click-button">
         <button onclick="window.location.href = '../Coletiva/cadastroColetiva.html'">
           <span>Cadastro das Coletivas</span>
