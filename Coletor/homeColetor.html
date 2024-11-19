@@ -3,76 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Coletor</title>
+    <title>Home do Coletor</title>
     <link rel="stylesheet" href="homeColetor.css">
     <link rel="shortcut icon" href="/img/logoColetiva.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-
 </head>
 
 <body>
     <div class="container">
+        <!-- Barra Superior -->
         <header class="top-bar">
             <button class="menu-icon" onclick="toggleMenu()">
                 <i class="fas fa-bars">=</i>
             </button>
             <h2>Home</h2>
-            <div class="search-box">
-                <input type="text" placeholder="Pesquisar">
-                <button><i class="fas fa-search">🔍</i></button>
-            </div>
-            
         </header>
-        
+
+        <!-- Menu Lateral -->
         <div class="side-menu" id="sideMenu">
             <button class="close-button" onclick="toggleMenu()">×</button>
             <nav class="side-menu-content">
                 <a href="homeColetor.html">Home</a>
+                <a href="coletasPendentes.html">Coletas Pendentes</a>
+                <a href="configurarDisponibilidade.html">Configurar Disponibilidade</a>
                 <a href="chatColetor.html">Chat</a>
                 <a href="perfilColetor.html">Perfil</a>
             </nav>
         </div>
 
+        <!-- Conteúdo Principal -->
         <div class="content">
             <main>
-                <div class="cards-container">
-                    <div class="card">
-                        <img src="Imagem_I_home.jpeg" alt="Lixeira Reciclagem">
-                        <h3>Coletas Agendadas</h3>
-                        <p>21/11/2024</p>
-                        <p>Coleta será iniciada na Travessa WE 30 com Travessa A.</p>
-                        <div class="card-buttons">
-                            <button class="accept-btn">Aceitar</button>
-                            <button class="decline-btn" onclick="removeCard(this)">Recusar</button>
+                <!-- Seção Coletas do Dia -->
+                <section id="coletas-dia">
+                    <h3>Coletas do Dia</h3>
+                    <div class="cards-container">
+                        <!-- Cartão 1 -->
+                        <div class="card">
+                            <img src="Imagem_I_home.jpeg" alt="Lixeira Reciclagem">
+                            <h4>Coleta Confirmada</h4>
+                            <p>21/11/2024</p>
+                            <p>Travessa WE 30 com Travessa A</p>
+                            <button class="start-btn" onclick="window.location.href='Coleta.html'">
+                                Iniciar Coleta
+                            </button>
+                        </div>
+
+                        <!-- Cartão 2 -->
+                        <div class="card">
+                            <img src="Imagem_II_home.jpeg" alt="Equipe de Coleta">
+                            <h4>Coleta Confirmada</h4>
+                            <p>21/11/2024</p>
+                            <p>Rua Providência com Travessa WE 37</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="Imagem_II_home.jpeg" alt="Equipe de Coleta">
-                        <h3>Coletas Agendadas</h3>
-                        <p>20/11/2024</p>
-                        <p>Coleta será iniciada na Rua Providência com Travessa WE 37.</p>
-                        <div class="card-buttons">
-                            <button class="accept-btn">Aceitar</button>
-                            <button class="decline-btn" onclick="removeCard(this)">Recusar</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="Imagem_III_home.jpeg" alt="Materiais Recicláveis">
-                        <h3>Coletas Agendadas</h3>
-                        <p>25/11/2024</p>
-                        <p>Coleta será iniciada na Avenida Nonato Sanova com Travessa WE 32.</p>
-                        <div class="card-buttons">
-                            <button class="accept-btn">Aceitar</button>
-                            <button class="decline-btn" onclick="removeCard(this)">Recusar</button>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </main>
         </div>
     </div>
 
-    <script src="sidemenuColetor.js"></script>
-    <script src="removecard.js"></script>
+    <script>
+        // Função para abrir/fechar o menu lateral
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

@@ -1,131 +1,174 @@
-/* Geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier Bold, Courier, Georgia;
-    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    background-color: #f7f8fc;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
     height: 100vh;
+    overflow-y: auto;
 }
 
 .container {
     width: 100%;
-    max-width: 800px; /* Limita a largura máxima em telas grandes */
-    height: 100%; /* Preenche a altura total da tela */
+    max-width: 900px;
+    height: auto; 
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden; /* Impede rolagem dentro do container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    overflow: hidden;
+    padding: 20px; 
 }
 
-/* Barra Superior */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; 
+}
+
 .top-bar {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 20px; /* Aumenta os espaços laterais */
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
 }
 
 .top-bar h2 {
     margin: 0;
-    font-size: 1.8em; /* Maior para acompanhar a largura */
-    flex-grow: 1;
+    font-size: 1.8em;
     text-align: center;
+    flex-grow: 1;
 }
 
-.search-bar {
+.menu-icon {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaço entre o campo e o botão */
-    width: 100%; /* Permite que a barra ocupe todo o espaço disponível */
 }
 
-.search-bar input {
-    padding: 10px 15px; /* Espaçamento interno maior */
-    border: 1px solid #ccc; /* Define uma borda leve */
-    border-radius: 20px; /* Deixa as bordas curvas */
-    outline: none;
-    flex-grow: 1; /* Faz o campo de texto ocupar o máximo possível do espaço */
-    font-size: 1em; /* Aumenta o tamanho da fonte */
+.menu-icon:hover {
+    color: #ffd700;
 }
 
-.search-bar button {
-    background-color: #4CAF50; /* Cor de fundo do botão */
-    color: white; /* Cor do ícone ou texto */
-    border: none;
-    border-radius: 20px; /* Bordas curvas iguais ao campo */
-    padding: 10px 15px; /* Espaçamento interno */
-    cursor: pointer;
-    font-size: 1em; /* Ajusta o tamanho do ícone ou texto */
-}
 
-/* Conteúdo Principal */
 .content {
     flex-grow: 1;
     padding: 20px;
 }
 
-/* Cartões */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajusta a largura mínima */
-    gap: 10px; /* Reduz o espaço entre cartões */
-    justify-content: center; /* Centraliza os cartões no container */
+
+#coletas-dia h3 {
+    font-size: 1.6em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
 
 .card {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    padding: 8px; /* Diminui o espaçamento interno */
-    width: 200px; /* Define uma largura fixa menor */
-    height: auto; /* Permite que a altura se ajuste automaticamente */
-    margin: 10px auto; /* Centraliza os cartões */
-    font-size: 14px; /* Reduz o tamanho da fonte */
+    padding: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
-    width: 100%; /* Mantém proporcional à largura do cartão */
-    height: 120px; /* Define uma altura menor */
-    object-fit: cover; /* Evita distorção da imagem */
-    border-radius: 4px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
 
-
-.card h3 {
+.card h4 {
     color: #4CAF50;
     margin: 10px 0;
+    font-size: 1.2em;
 }
 
 .card p {
-    color: #555;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+
+.start-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-btn:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+}
+
+.start-btn:active {
+    background-color: #2e7d32;
+    transform: translateY(1px);
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
-    .cards-container {
-        flex-direction: column; /* Empilha os cartões verticalmente */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 
-    .card {
-        width: 100%; /* Cartões ocupam a largura completa */
+    .container {
+        width: 95%; /* Ajusta a largura para telas menores */
+        padding: 15px;
+        box-shadow: none; /* Retira a sombra para melhor visualização em telas pequenas */
     }
 
-    .top-bar h2 {
-        font-size: 1rem; /* Reduz o tamanho da fonte */
+    .map {
+        height: 250px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .finish-btn, .exit-btn {
+        width: 100%;
     }
 }
 
@@ -135,7 +178,7 @@ body {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color:#4CAF50;
+    background-color: #4CAF50;
     color: white;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     transition: left 0.3s ease;
@@ -174,44 +217,5 @@ body {
 }
 
 .side-menu.active {
-    left: 0; /* Faz o menu deslizar para dentro da tela */
-}
-
-.menu-icon {
-    margin-right: auto; /* Move o ícone para o início da barra */
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.card-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.card-buttons button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.accept-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.decline-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-.card-buttons button:hover {
-    opacity: 0.9;
+    left: 0;
 }

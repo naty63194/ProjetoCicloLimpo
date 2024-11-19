@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Coleta</title>
+    <link rel="stylesheet" href="coleta.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="shortcut icon" href="/img/logoColetiva.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra Superior -->
+        <div class="top-bar">
+            <button class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars">=</i>
+            </button>
+            <h2>Detalhes da Coleta</h2>
+        </div>
+<!-- Menu Lateral -->
+<div class="side-menu" id="sideMenu">
+    <button class="close-button" onclick="toggleMenu()">×</button>
+    <nav class="side-menu-content">
+        <a href="homeColetor.html">Home</a>
+        <a href="coletasPendentes.html">Coletas Pendentes</a>
+        <a href="configurarDisponibilidade.html">Configurar Disponibilidade</a>
+        <a href="chatColetor.html">Chat</a>
+        <a href="perfilColetor.html">Perfil</a>
+    </nav>
+</div>
+        <!-- Mapa -->
+        <div id="map" class="map"></div>
+
+        <!-- Informações da Coleta -->
+        <div class="info-container">
+            <div class="info-section" id="info-coleta">
+                <h3>Informações da Coleta</h3>
+                <p><strong>Material:</strong> Carregando...</p>
+                <p><strong>Estimativa de Peso:</strong> Carregando...</p>
+            </div>
+
+            <div class="info-section" id="info-morador">
+                <h3>Informações do Morador</h3>
+                <p><strong>Nome:</strong> Carregando...</p>
+                <p><strong>Endereço:</strong> Carregando...</p>
+                <p><strong>Contato:</strong> Carregando...</p>
+            </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="footer">
+            <button class="finish-btn" id="finish-coleta-btn">Coleta Realizada</button>
+            <button class="exit-btn" id="exit-btn" onclick="window.location.href='homeColetor.html'">Sair</button>
+        </div>
+
+        <!-- Chat -->
+        <div class="chat-section">
+            <h3>Chat com o Morador</h3>
+            <div class="chat-box" id="chat-box">
+                <p>Carregando mensagens...</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+                <button id="send-msg-btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="coleta.js"></script>
+</body>
+</html>
