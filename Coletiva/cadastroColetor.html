@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro do Coletor</title>
+  <link rel="stylesheet" href="/Coletiva/cadastroColetor.css">
+  <link rel="shortcut icon" href="/img/logoColetiva.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <form id="cadastroColetorForm">
+      <p class="textoInicial">Cadastro do Coletor</p>
+      <p class="subTitulo">Preencha os campos abaixo para cadastrar o coletor:</p>
+      
+      <!-- Campos de dados pessoais -->
+      <label>
+        <input type="text" id="nomeColetor" class="input" required>
+        <span class="placeholder">Nome Completo</span>
+      </label>
+      <label>
+        <input type="text" id="cpfColetor" class="input" required>
+        <span class="placeholder">CPF</span>
+      </label>
+      <label>
+        <input type="text" id="rgColetor" class="input" required>
+        <span class="placeholder">RG</span>
+      </label>
+      
+      <div class="phone-container">
+        <div class="flex">
+          <label class="ddd">
+            <input type="text" id="dddColetor" class="input" required pattern="\d{2}">
+            <span class="placeholder">DDD</span>
+          </label>
+          <label class="telefone">
+            <input type="tel" id="telefoneColetor" class="input" required pattern="\d{8,10}">
+            <span class="placeholder">Telefone</span>
+          </label>
+        </div>
+        <!-- Botão para adicionar novo telefone -->
+        <button type="button" class="add-phone" onclick="addPhoneField()">+</button>
+      </div>
+
+      <label>
+        <input type="email" id="emailColetor" class="input" required>
+        <span class="placeholder">E-mail</span>
+      </label>
+      <label>
+        <input type="password" id="senhaColetor" class="input" required>
+        <span class="placeholder">Criar Senha</span>
+      </label>
+      <label>
+        <input type="password" id="confirmarSenhaColetor" class="input" required>
+        <span class="placeholder">Confirmar Senha</span>
+      </label>
+      
+      <button type="submit" class="submit">Cadastrar</button>
+    </form>
+
+
+  <script src="/Coletiva/cadastroColetor.js"></script>
+</body>
+</html>

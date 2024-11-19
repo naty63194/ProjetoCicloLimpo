@@ -1,10 +1,12 @@
 const agreeTerms = document.getElementById('agreeTerms');
-    const submitBtn = document.getElementById('submitBtn');
+const submitBtn = document.getElementById('submitBtn');
 
-    agreeTerms.addEventListener('change', function() {
-      submitBtn.disabled = !agreeTerms.checked;
-    });
+agreeTerms.addEventListener('change', function() {
+  submitBtn.disabled = !agreeTerms.checked;
+});
 
-    submitBtn.addEventListener('click', function() {
-      alert('Cadastro concluído com sucesso!');
-    });
+
+submitBtn.addEventListener('click', function() {
+  alert('Cadastro concluído com sucesso!');
+  window.location.href = 'homeADM.html';  
+});

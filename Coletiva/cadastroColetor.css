@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    overflow: hidden;
+}
+   
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+
+.textoInicial {
+    font-size: 28px;
+    color: #2e8b57;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+  
+.textoInicial::before,
+.textoInicial::after {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    left: 0;
+    background-color: rgba(46, 139, 87);
+}
+  
+.textoInicial::after {
+    animation: pulse 1s linear infinite;
+}
+  
+.subTitulo {
+    color: #585757;
+    font-size: 14px;
+}
+  
+/* Estilo dos inputs e placeholders */
+label {
+    position: relative;
+}
+  
+.input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    outline: 0;
+}
+  
+.placeholder {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 0.9em;
+    color: grey;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+  
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+    top: -8px;
+    font-size: 0.75em;
+    color: #2e8b57;
+    background: #fff;
+    padding: 0 5px;
+}
+  
+.input:focus {
+    border-color: #2e8b57;
+}
+  
+/* Campos de DDD e Telefone */
+.flex {
+    display: flex;
+    gap: 10px;
+}
+  
+.ddd {
+    flex: 1;
+    max-width: 60px;
+}
+  
+.telefone {
+    flex: 3;
+}
+  
+.phone-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+.add-phone {
+    font-size: 1.2em;
+    color: white;
+    background-color: #2e8b57;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.add-phone:hover {
+    background-color: #006400;
+}
+  
+/* Botão de Enviar */
+.submit {
+    background-color: #2e8b57;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.submit:hover {
+    background-color: #006400;
+}
+
+/* Número gerado */
+.numeroColetorMensagem {
+    font-size: 16px;
+    color: #2e8b57;
+    font-weight: bold;
+    text-align: center;
+}
+
+.numeroColetor {
+    font-size: 20px;
+    color: #006400;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
