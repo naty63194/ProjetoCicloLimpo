@@ -1,0 +1,114 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.content {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Pontos */
+.points-section {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.points-display {
+    font-size: 24px;
+    color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.points-display i {
+    font-size: 36px;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.reward-item {
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reward-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.redeem-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.redeem-button:hover {
+    background-color: #45a049;
+}
+
+/* Botão Voltar */
+.back-to-home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .points-display {
+        flex-direction: column;
+    }
+
+    .reward-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .rewards-grid {
+        grid-template-columns: 1fr;
+    }
+}

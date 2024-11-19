@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontos e Recompensas</title>
+    <link rel="stylesheet" href="pontos.css">
+    <link rel="shortcut icon" href="/img/logoColetiva.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <h1>Seus Pontos e Recompensas</h1>
+    </header>
+
+    <main class="content">
+        <section class="points-section">
+            <h2>Seus Pontos</h2>
+            <div class="points-display">
+                <i class="fas fa-coins"></i>
+                <p><span id="points">350</span> Pontos</p>
+            </div>
+            <p>Continue participando da coleta seletiva para acumular mais pontos!</p>
+        </section>
+
+        <section class="rewards-section">
+            <h2>Recompensas Disponíveis</h2>
+            <div class="rewards-grid">
+                <!-- Recompensa 1 -->
+                <div class="reward-item">
+                    <img src="/img/food-cart_9778864.png" alt="Cupom de Desconto" class="reward-image">
+                    <h3>Desconto no Supermercado</h3>
+                    <p>50 pontos</p>
+                    <button class="redeem-button" data-cost="50">Trocar</button>
+                </div>
+                <!-- Recompensa 2 -->
+                <div class="reward-item">
+                    <img src="/img/bus_619166.png" alt="Passagem de Transporte" class="reward-image">
+                    <h3>Passagem de Transporte Público</h3>
+                    <p>100 pontos</p>
+                    <button class="redeem-button" data-cost="100">Trocar</button>
+                </div>
+                <!-- Recompensa 3 -->
+                <div class="reward-item">
+                    <img src="/img/eco-light_4343278.png" alt="Desconto na Energia" class="reward-image">
+                    <h3>Desconto na Conta de Energia</h3>
+                    <p>200 pontos</p>
+                    <button class="redeem-button" data-cost="200">Trocar</button>
+                </div>
+                <!-- Recompensa 4 -->
+                <div class="reward-item">
+                    <img src="/img/plant_2227519.png" alt="Árvore Plantada" class="reward-image">
+                    <h3>Plante uma Árvore em Seu Nome</h3>
+                    <p>300 pontos</p>
+                    <button class="redeem-button" data-cost="300">Trocar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="back-to-home">
+            <button id="homeButton" class="home-button">Voltar à Tela Inicial</button>
+        </section>
+    </main>
+
+    <script>
+        // Simula os pontos do usuário
+        let userPoints = 350;
+
+        // Atualiza a exibição dos pontos
+        const pointsDisplay = document.getElementById('points');
+
+        // Configuração dos botões de troca
+        document.querySelectorAll('.redeem-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const cost = parseInt(button.getAttribute('data-cost'));
+
+                if (userPoints >= cost) {
+                    userPoints -= cost;
+                    pointsDisplay.textContent = userPoints;
+                    alert("Recompensa resgatada com sucesso!");
+                } else {
+                    alert("Pontos insuficientes para esta recompensa.");
+                }
+            });
+        });
+
+        const homeButton = document.getElementById('homeButton');
+        homeButton.addEventListener('click', () => {
+            window.location.href = "http://127.0.0.1:3000/Morador/TelaHome.html";
+        });
+    </script>
+</body>
+</html>

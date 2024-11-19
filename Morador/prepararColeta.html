@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como Preparar a Coleta</title>
     <link rel="stylesheet" href="prepararColeta.css">
-    <link rel="shortcut icon" href="/img/logoColetiva.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -80,8 +79,13 @@
 
     <footer class="footer">
         <p>Separar o lixo é um ato de cuidado com o meio ambiente e com a comunidade. 🌱</p>
+        <button class="back-button" onclick="goBack()">Voltar</button>
     </footer>
-
-    <script defer src="comoSepararLixo.js"></script>
+    
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>

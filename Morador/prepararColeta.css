@@ -57,7 +57,26 @@ body {
     background-color: #f1f1f1;
     color: #555;
 }
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+.back-button:hover {
+    background-color: #45a049;
+}
+
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #4caf50;
+}
 @media (max-width: 768px) {
     .step-icon {
         width: 40px;

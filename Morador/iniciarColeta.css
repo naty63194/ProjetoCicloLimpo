@@ -1,52 +1,148 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: Arial, 'Gill Sans', sans-serif;
     background-color: #f3f4f6;
+    color: #333;
 }
 
-.container {
-    text-align: center;
-}
-
-.start-button {
-    padding: 20px 40px;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
+.header {
     background-color: #3ab56f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.content {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização dos campos e botões */
+fieldset, label, select, input[type="radio"] {
+    display: block;
+    margin-bottom: 15px;
+}
+
+button.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #3ab56f;
+    color: white;
     border: none;
-    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.start-button:hover {
+button.submit-button:hover {
     background-color: #2e8b57;
+    transform: scale(1.05);
 }
 
-.start-button:active {
-    background-color: #2e8b57;
-    transform: scale(0.98);
+button.submit-button i {
+    font-size: 18px;
 }
 
+.calendar, .time-slots {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input#datePicker {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.time-slot {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.time-slot:hover {
+    background-color: #3ab56f;
+    color: white;
+    border-color: #3ab56f;
+}
+
+.time-slot.selected {
+    background-color: #3ab56f;
+    color: white;
+    border: none;
+}
+
+/* Melhorias na responsividade */
 @media (max-width: 768px) {
-    .start-button {
-        width: 90%;
+    .content {
+        max-width: 90%;
         padding: 15px;
-        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .time-slot {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button.submit-button {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .start-button {
-        width: 100%;
-        padding: 15px;
-        font-size: 18px;
+    .header {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .time-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .time-slot {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button.submit-button {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }

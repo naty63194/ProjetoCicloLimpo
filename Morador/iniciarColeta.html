@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Coleta - Etapa 1</title>
+    <link rel="stylesheet" href="iniciarColeta.css">
+    <link rel="shortcut icon" href="/img/logoColetiva.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <h1>Agendar Coleta Seletiva - Etapa 1</h1>
+    </header>
+
+    <main class="content">
+        <form class="coleta-form" action="agendarColeta.html" method="post">
+            <label for="tipoLixo">Selecione o tipo de lixo:</label>
+            <select id="tipoLixo" name="tipoLixo" required>
+                <option value="plástico">Plástico</option>
+                <option value="papel">Papel</option>
+                <option value="vidro">Vidro</option>
+                <option value="metal">Metal</option>
+                <option value="orgânico">Orgânico</option>
+            </select>
+
+            <fieldset>
+                <legend>Estimativa de peso:</legend>
+                <label>
+                    <input type="radio" name="peso" value="menosDe3kg" required>
+                    Menos de 3kg
+                </label>
+                <label>
+                    <input type="radio" name="peso" value="ate5kg">
+                    Até 5kg
+                </label>
+                <label>
+                    <input type="radio" name="peso" value="maisDe6kg">
+                    Mais de 6kg
+                </label>
+            </fieldset>
+
+            <button type="submit" class="submit-button">Próximo</button>
+        </form>
+    </main>
+</body>
+</html>

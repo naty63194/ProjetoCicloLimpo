@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Coleta - Etapa 2</title>
+    <link rel="stylesheet" href="iniciarColeta.css">
+    <link rel="shortcut icon" href="/img/logoColetiva.png" type="image/x-icon">
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Agendar Coleta Seletiva - Etapa 2</h1>
+    </header>
+
+    <main class="content">
+        <form class="coleta-form" id="coletaForm" action="#" method="post">
+            <div class="calendar">
+                <h3>Escolha uma data disponível:</h3>
+                <input type="text" id="datePicker" name="data" placeholder="Clique para escolher a data" required>
+            </div>
+
+            <div class="time-slots">
+                <h3>Escolha um horário:</h3>
+                <div class="time-grid">
+                    <button type="button" class="time-slot" data-time="08:00">08:00 - 10:00</button>
+                    <button type="button" class="time-slot" data-time="10:00">10:00 - 12:00</button>
+                    <button type="button" class="time-slot" data-time="14:00">14:00 - 16:00</button>
+                    <button type="button" class="time-slot" data-time="16:00">16:00 - 18:00</button>
+                </div>
+                <input type="hidden" id="selectedTime" name="horario" required>
+            </div>
+
+            <button type="submit" class="submit-button">
+                <i class="fas fa-calendar-check"></i> Confirmar Agendamento
+            </button>
+        </form>
+    </main>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Font Awesome (ícones) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Configuração do Flatpickr com datas da próxima semana
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+
+            // Próxima segunda-feira
+            const nextMonday = new Date(today);
+            nextMonday.setDate(today.getDate() + ((1 + 7 - today.getDay()) % 7 || 7)); 
+
+            const nextWeekDates = [];
+            for (let i = 0; i < 7; i++) { 
+                const date = new Date(nextMonday);
+                date.setDate(nextMonday.getDate() + i);
+                nextWeekDates.push(date.toISOString().split('T')[0]);
+            }
+
+            // Configura o Flatpickr com as datas disponíveis
+            flatpickr("#datePicker", {
+                dateFormat: "d/m/Y",
+                enable: nextWeekDates,
+                locale: "pt"
+            });
+        });
+
+        // Seleção de horário
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', () => {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                slot.classList.add('selected');
+                document.getElementById('selectedTime').value = slot.dataset.time;
+            });
+        });
+
+        // Redirecionar após o envio do formulário
+        const form = document.getElementById('coletaForm');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+            alert("Agendamento confirmado com sucesso!"); 
+            window.location.href = "http://127.0.0.1:3000/Morador/TelaHome.html"; 
+        });
+    </script>
+</body>
+</html>
